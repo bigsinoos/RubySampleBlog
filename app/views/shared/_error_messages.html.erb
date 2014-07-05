@@ -1,0 +1,7 @@
+<% if object.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert-error">
+      فرم دارای<%= object.errors.count %> ارور میباشد.
+    </div>
+  </div>
+<% end %>

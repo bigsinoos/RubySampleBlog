@@ -1,0 +1,11 @@
+<li>
+  <span class="content"><%= micropost.content %></span>
+  <span class="timestamp">
+    توییت شده در <%= micropost.created_at %> (میلادی).
+  </span>
+  <% if current_user?(micropost.user) %>
+    <%= link_to "حذف", micropost, method: :delete,
+                                     data: { confirm: 'مطمنی؟' },
+                                     title: micropost.content %>
+  <% end %>
+</li>
